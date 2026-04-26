@@ -1,0 +1,211 @@
+{
+  "name": "bgp-underlay",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-049de22244f4",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCMBIIdny6xz9eMz2vGhYFUCIQB6baS10T3/2QFn5k1/u/fdvXm3ABwSOo+rNRTvUnoDoY89eXA3WRqKwE4dSTquWko7aqjylA3Bxm99z9lFSeoko/dzHrWiInEGK935uPd10Imw0dis9SDLQqqlpgpOa2L3vLcn+wPOGCcKwYPUCjL0/xfY/JvK5MTXiJl5KXneW8F39klBfrDbIpT40w+k1z0v/nuEiCiFcQ1ppmM/98VKzibx09/I6MbFXL1yEFDvesFFirwKSrnjIzlZTnXGck/qI3xuuiJD0u7pW1MTMycKDu8JN5qf44qYR5qCDXstf5qOgTZ8Ys9zJg6jqBQba3mjziKcwFLhHqj/uHdfrvpkWibbGHbrCabEu51LZ8K66xrhhRdD43fpD0AuO0vcfOSPlg5Ww7FtATy7L/m/lsb5Wbvu1X44UXzmanBCiW2zZQKL2/dwuGt5Bcyjw3kjH+efaXcC+qepeW+8WNI6SmlXWJoeVYNVoVLtaBaPC2R8tcm/0AcLL3gay9k/11n1CSOd+U4jTfUPDJDNXRwGygWko6Rm94sSxlEPfm0OXbTfFhnpxWaxyUH0VzVlS6d2HQqRLKFy88CccgEnIyLVs2fnTjIVmU8eMFx8FnKa1UGOO/K6Eev1rbikAIfPdIPVAF/pJw9U6+xetBItbnGIw=="],
+  "nodes": {
+    "leaf1": {
+      "index": "0",
+      "shortname": "leaf1",
+      "longname": "clab-bgp-underlay-leaf1",
+      "fqdn": "leaf1.bgp-underlay.io",
+      "group": "",
+      "labdir": "/home/jmorris/containerlab/clab-bgp-underlay/leaf1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-049de22244f4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jmorris/containerlab/clab-bgp-underlay/leaf1",
+        "clab-node-longname": "clab-bgp-underlay-leaf1",
+        "clab-node-name": "leaf1",
+        "clab-node-type": "",
+        "clab-owner": "jmorris",
+        "clab-topo-file": "/home/jmorris/containerlab/bgp-underlay.clab.yaml",
+        "containerlab": "bgp-underlay"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf2": {
+      "index": "1",
+      "shortname": "leaf2",
+      "longname": "clab-bgp-underlay-leaf2",
+      "fqdn": "leaf2.bgp-underlay.io",
+      "group": "",
+      "labdir": "/home/jmorris/containerlab/clab-bgp-underlay/leaf2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-049de22244f4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jmorris/containerlab/clab-bgp-underlay/leaf2",
+        "clab-node-longname": "clab-bgp-underlay-leaf2",
+        "clab-node-name": "leaf2",
+        "clab-node-type": "",
+        "clab-owner": "jmorris",
+        "clab-topo-file": "/home/jmorris/containerlab/bgp-underlay.clab.yaml",
+        "containerlab": "bgp-underlay"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine1": {
+      "index": "2",
+      "shortname": "spine1",
+      "longname": "clab-bgp-underlay-spine1",
+      "fqdn": "spine1.bgp-underlay.io",
+      "group": "",
+      "labdir": "/home/jmorris/containerlab/clab-bgp-underlay/spine1",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-049de22244f4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jmorris/containerlab/clab-bgp-underlay/spine1",
+        "clab-node-longname": "clab-bgp-underlay-spine1",
+        "clab-node-name": "spine1",
+        "clab-node-type": "",
+        "clab-owner": "jmorris",
+        "clab-topo-file": "/home/jmorris/containerlab/bgp-underlay.clab.yaml",
+        "containerlab": "bgp-underlay"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine2": {
+      "index": "3",
+      "shortname": "spine2",
+      "longname": "clab-bgp-underlay-spine2",
+      "fqdn": "spine2.bgp-underlay.io",
+      "group": "",
+      "labdir": "/home/jmorris/containerlab/clab-bgp-underlay/spine2",
+      "kind": "linux",
+      "image": "frrouting/frr:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-049de22244f4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/jmorris/containerlab/clab-bgp-underlay/spine2",
+        "clab-node-longname": "clab-bgp-underlay-spine2",
+        "clab-node-name": "spine2",
+        "clab-node-type": "",
+        "clab-owner": "jmorris",
+        "clab-topo-file": "/home/jmorris/containerlab/bgp-underlay.clab.yaml",
+        "containerlab": "bgp-underlay"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "leaf1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:ff:bf:4d",
+          "peer": "z"
+        },
+        "z": {
+          "node": "spine1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:13:13:03",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "leaf1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:53:f0:ab",
+          "peer": "z"
+        },
+        "z": {
+          "node": "spine2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:ed:bc:c5",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "leaf2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:fe:42:91",
+          "peer": "z"
+        },
+        "z": {
+          "node": "spine1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:28:a6:8d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "leaf2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:cf:d0:0b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "spine2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:c7:67:28",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
